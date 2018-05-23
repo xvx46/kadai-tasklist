@@ -100,7 +100,7 @@ class TasksController extends Controller
         ]);
          
         $task = Task::find($id);
-        $message->title = $request->title; 
+        $task->title = $request->title; 
         $task->content = $request->content;
         $task->save();
 
